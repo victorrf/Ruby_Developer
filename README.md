@@ -1,2 +1,2 @@
 # Ruby_Developer
-Desafios do Curso Dio de Ruby Developer
+Desafios do Curso da Dio de Ruby Developer
