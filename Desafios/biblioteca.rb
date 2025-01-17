@@ -1,10 +1,10 @@
 print "Digite seu nome: "
-nome = gets.chomp
+name = gets.chomp
 
 print "Digite seu sobrenome: "
-sobrenome = gets.chomp
+last_name = gets.chomp
 
 print "Digite sua idade: "
-idade = gets.chomp.to_i
+age = gets.chomp.to_i
 
-puts "Parabéns, senhor #{nome} #{sobrenome} com idade de #{idade} anos, por se cadastrar em nossa biblioteca!"
+puts "Parabéns, senhor #{name} #{last_name} com idade de #{age} anos, por se cadastrar em nossa biblioteca!"
