@@ -1,7 +1,7 @@
-resultado = ''
+result = ''
 
 loop do
-    puts resultado
+    puts result
     puts "======================"
     puts "Seleciona uma opção"
     puts "[1] adição"
@@ -12,45 +12,45 @@ loop do
     puts "======================"
     print "Digite sua escolha: "
 
-    opcao = gets.chomp.to_i
+    option = gets.chomp.to_i
 
-    if opcao == 1
+    if option == 1
         print "Digite o primeiro número: "
         num1 = gets.chomp.to_i
         print "Digite o segundo número: "
         num2 = gets.chomp.to_i
-        adicao = num1 + num2
-        resultado = "Resultado foi #{adicao}"
+        sum = num1 + num2
+        result = "Resultado foi #{sum}"
 
-    elsif opcao == 2
+    elsif option == 2
         print "Digite o primeiro número: "
         num1 = gets.chomp.to_i
         print "Digite o segundo número: "
         num2 = gets.chomp.to_i
-        subtracao = num1 - num2
-        resultado = "Resultado foi #{subtracao}"
+        subtraction = num1 - num2
+        result = "Resultado foi #{subtraction}"
 
-    elsif opcao == 3
+    elsif option == 3
         print "Digite o primeiro número: "
         num1 = gets.chomp.to_i
         print "Digite o segundo número: "
         num2 = gets.chomp.to_i
         multi = num1 * num2
-        resultado = "Resultado foi #{multi}"
+        result = "Resultado foi #{multi}"
 
-    elsif opcao == 4
+    elsif option == 4
         print "Digite o primeiro número: "
         num1 = gets.chomp.to_i
         print "Digite o segundo número: "
         num2 = gets.chomp.to_i
         div = num1 / num2
-        resultado = "Resultado foi #{div}"
+        result = "Resultado foi #{div}"
 
-    elsif opcao == 0
-        break if opcao == 0
+    elsif option == 0
+        break if option == 0
     
     else
-        resultado = "Opção inválida!"
+        result = "Opção inválida!"
     end
 
 end
