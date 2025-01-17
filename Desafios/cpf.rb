@@ -19,15 +19,15 @@ end
      puts "============================="
      print "\n Digite sua escolha: "
 
-     opcao = gets.chomp.to_i
+     option = gets.chomp.to_i
 
-     if opcao == 1
+     if option == 1
         print "\n Digite seu CPF (apenas os números): "
         cpf_number = gets.chomp
         check_cpf(cpf_number)
 
-     elsif opcao == 0
-         break if opcao == 0
+     elsif option == 0
+         break if option == 0
                 
      else
          puts "\n Opção inválida!"
