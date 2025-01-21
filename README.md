@@ -37,10 +37,15 @@ Ruby é uma linguagem de programação criada para ser de fácil entendimento, c
 - **🔧 Tecnologias Utilizadas**: Ruby, Gems.
 - **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/blob/main/Desafios/cpf.rb).
 
-- ### 5. [📄 Criando uma Dinâmica de Mercado com POO em Ruby]
+### 5. [📄 Criando uma Dinâmica de Mercado com POO em Ruby]
 - **🔹 Descrição**: Neste projeto, eu fui desafiado a criar um código em três arquivos que “conversem” entre si como aprendido nas aulas. Simulei o ato de escolher e comprar um produto em um mercado.
 - **🔧 Tecnologias Utilizadas**: Ruby, POO.
 - **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/tree/main/Desafios/MercadocomPOO).
+Criando o seu Blog com Ruby on Rails
+### 6. [📄 Criando o seu Blog com Ruby on Rails]
+- **🔹 Descrição**: Neste desafio utilizei todos os conhecimentos aprendidos sobre Ruby on Rails durante o curso, desenvolvi um blog na temática dos livros que li.
+- **🔧 Tecnologias Utilizadas**: Ruby, POO, Ruby on Rails.
+- **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/tree/main/Desafios/livro).
 
 ## 📢 Contato
 
