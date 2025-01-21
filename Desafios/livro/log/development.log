@@ -1,0 +1,824 @@
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Livro'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Livro'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Livro'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-01-20 23:22:22.017281', '2025-01-20 23:22:22.017285') RETURNING "key" /*application='Livro'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Livro'*/[0m
+Migrating to CreateBooks (20250120232148)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tittle" varchar, "author" varchar, "score" float, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Livro'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250120232148') RETURNING "version" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Livro'*/[0m
+Started GET "/" for ::1 at 2025-01-20 20:22:36 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/" for ::1 at 2025-01-20 20:22:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Livro'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/books" for ::1 at 2025-01-20 20:22:43 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | GC: 0.0ms)
+Completed 200 OK in 1409ms (Views: 28.2ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/book" for ::1 at 2025-01-20 20:22:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/book"):
+  
+Started GET "/books" for ::1 at 2025-01-20 20:22:50 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 643ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:22:52 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 16.8ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 18.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | GC: 0.0ms)
+Completed 200 OK in 613ms (Views: 19.8ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 20:25:44 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books" for ::1 at 2025-01-20 20:25:47 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 671ms (Views: 15.7ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:25:49 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 592ms (Views: 4.4ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:27:24 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/new" for ::1 at 2025-01-20 20:27:42 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/" for ::1 at 2025-01-20 20:28:12 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 621ms (Views: 12.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:28:14 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 599ms (Views: 6.0ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/turbo.min-5dd5a71a.js.map" for ::1 at 2025-01-20 20:28:19 -0300
+Started GET "/assets/stimulus.min-2395e199.js.map" for ::1 at 2025-01-20 20:28:19 -0300
+Started GET "/books/new" for ::1 at 2025-01-20 20:28:52 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/new" for ::1 at 2025-01-20 20:29:01 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/" for ::1 at 2025-01-20 20:29:04 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 601ms (Views: 12.4ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:29:05 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 590ms (Views: 5.3ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:29:17 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/" for ::1 at 2025-01-20 20:29:20 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | GC: 0.0ms)
+Completed 200 OK in 688ms (Views: 15.4ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:29:22 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 592ms (Views: 4.5ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:30:19 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books" for ::1 at 2025-01-20 20:30:21 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 0.0ms)
+Completed 200 OK in 706ms (Views: 14.9ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:30:22 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 22.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | GC: 0.0ms)
+Completed 200 OK in 613ms (Views: 24.0ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2025-01-20 20:33:12 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:4:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/books/" for ::1 at 2025-01-20 20:33:15 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 618ms (Views: 11.9ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:33:17 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 591ms (Views: 5.1ms | ActiveRecord: 0.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2025-01-20 20:33:24 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "book" => {"tittle" => "v", "author" => "v", "score" => "4", "description" => "ffffffffffffff"}, "commit" => "Create Book"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('v', 'v', 4.0, 'ffffffffffffff', '2025-01-20 23:33:25.035880', '2025-01-20 23:33:25.035880') RETURNING "id" /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 602ms (ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1" for ::1 at 2025-01-20 20:33:25 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 676ms (Views: 9.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1/edit" for ::1 at 2025-01-20 20:33:27 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 593ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1/edit" for ::1 at 2025-01-20 20:33:28 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "1"}
+Started GET "/books" for ::1 at 2025-01-20 20:33:28 -0300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 710ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/1/edit" for ::1 at 2025-01-20 20:33:29 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "1"}
+Started DELETE "/books/1" for ::1 at 2025-01-20 20:33:29 -0300
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 10.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | GC: 0.0ms)
+Completed 200 OK in 1011ms (Views: 17.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 1150ms (Views: 7.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 1 LIMIT 1 /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+  [1m[36mBook Destroy (1.6ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 1 /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+Redirected to http://localhost:3000/books
+Completed 303 See Other in 1051ms (ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-01-20 20:33:30 -0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 599ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/" for ::1 at 2025-01-20 20:35:17 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 604ms (Views: 3.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:35:19 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 584ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2025-01-20 20:35:26 -0300
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "book" => {"tittle" => "v", "author" => "v", "score" => "2", "description" => "eweds"}, "commit" => "Create Book"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+  [1m[36mBook Create (1.8ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('v', 'v', 2.0, 'eweds', '2025-01-20 23:35:27.551888', '2025-01-20 23:35:27.551888') RETURNING "id" /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:27:in 'block in BooksController#create'
+Redirected to http://localhost:3000/books/2
+Completed 302 Found in 600ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2" for ::1 at 2025-01-20 20:35:27 -0300
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.0ms)
+Completed 200 OK in 692ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2/edit" for ::1 at 2025-01-20 20:35:28 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 621ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2/edit" for ::1 at 2025-01-20 20:35:30 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "2"}
+Started GET "/books" for ::1 at 2025-01-20 20:35:30 -0300
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 639ms (Views: 3.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 588ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2" for ::1 at 2025-01-20 20:35:32 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 592ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-01-20 20:35:34 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 599ms (Views: 4.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 20:37:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/routes" for ::1 at 2025-01-20 20:37:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/" for ::1 at 2025-01-20 20:38:06 -0300
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:6:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/" for ::1 at 2025-01-20 20:38:06 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 0.0ms)
+Completed 200 OK in 809ms (Views: 22.5ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2" for ::1 at 2025-01-20 20:38:09 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.0ms)
+Completed 200 OK in 592ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2" for ::1 at 2025-01-20 20:38:09 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 586ms (Views: 1.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2/edit" for ::1 at 2025-01-20 20:38:11 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "2"}
+Started GET "/books" for ::1 at 2025-01-20 20:38:11 -0300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 873ms (Views: 10.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2/edit" for ::1 at 2025-01-20 20:38:12 -0300
+Processing by BooksController#edit as HTML
+  Parameters: {"id" => "2"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 1034ms (Views: 7.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='edit',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 675ms (Views: 2.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/2" for ::1 at 2025-01-20 20:38:14 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "2"}
+Started GET "/books" for ::1 at 2025-01-20 20:38:14 -0300
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 753ms (Views: 7.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 839ms (Views: 3.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-01-20 20:38:15 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 596ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:38:17 -0300
+Processing by BooksController#new as HTML
+Started GET "/books/2" for ::1 at 2025-01-20 20:38:17 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "2"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 741ms (Views: 6.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/books/2" for ::1 at 2025-01-20 20:38:18 -0300
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 905ms (Views: 3.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 2 LIMIT 1 /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+  [1m[36mBook Destroy (1.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = 2 /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:52:in 'BooksController#destroy'
+Redirected to http://localhost:3000/books
+Completed 303 See Other in 666ms (ActiveRecord: 3.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-01-20 20:38:19 -0300
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 594ms (Views: 3.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:38:20 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.0ms)
+Completed 200 OK in 588ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 20:51:17 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (8.8ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 12.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | GC: 0.0ms)
+Completed 200 OK in 625ms (Views: 4.9ms | ActiveRecord: 8.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:51:18 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 603ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2025-01-20 20:51:20 -0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered books/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 587ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books" for ::1 at 2025-01-20 20:51:22 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/index.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 582ms (Views: 2.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[36mBook Create (0.6ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('Deuses americanos', 'Neil Gaiman', 8.0, 'A saga de Deuses americanos é contada ao longo da jornada de Shadow Moon, um ex-presidiário de trinta e poucos anos que acabou de ser libertado e cujo único objetivo é voltar para casa e para a esposa, Laura. Os planos de Shadow se transformam em poeira quando ele descobre que Laura morreu em um acidente de carro. Sem lar, sem emprego e sem rumo, ele conhece Wednesday, um homem de olhar enigmático que está sempre com um sorriso no rosto, embora pareça nunca achar graça de nada.', '2025-01-20 23:54:44.423157', '2025-01-20 23:54:44.423157') RETURNING "id" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+Started GET "/books" for ::1 at 2025-01-20 20:54:53 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 596ms (Views: 3.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[36mBook Create (1.2ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('Grandes Contos', 'H. P. Lovecraft', 7.0, 'Grandes contos reúne várias histórias fantásticas do homem que reinventou o terror: o norte-americano H.P. Lovecraft.', '2025-01-21 00:00:06.292922', '2025-01-21 00:00:06.292922') RETURNING "id" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+Started GET "/books" for ::1 at 2025-01-20 21:00:11 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 630ms (Views: 3.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('O livro de ouro da mitologia: Histórias de deuses e heróis', 'Thomas Bulfinch', 9.0, 'Altares ruíram e templos se perderam nas areias do tempo, mas as religiões da Grécia e da Roma Antigas nunca despareceram por completo. Seu legado de mitos e heróis continua presente até hoje, e é o pilar da cultura ocidental. As histórias passadas de geração a geração há milênios, que hoje são peças-chave das mais populares e consagradas obras de diversas formas de arte estão reunidas aqui, sob as bênçãos de Zeus.As mais cativantes narrativas que a mente humana já criou transportam o leitor para terras onde fatos incríveis acontecem - onde belas ninfas e corajosos heróis veem seus destinos nas mãos de caprichosos deuses e criaturas fantásticas ganham vida.', '2025-01-21 00:02:18.472526', '2025-01-21 00:02:18.472526') RETURNING "id" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('Introdução à Economia', 'N. Gregory Mankiw', 7.0, 'Estudar economia nem sempre é uma das tarefas mais fáceis embora o conhecimento da matéria facilite de várias maneiras a vida de quem domina o assunto. Pensando nisso N. Gregory Mankiw escreveu em linguagem clara e atraente, Introdução à Economia, levando em conta três razões principais que segundo ele o aluno tem para aprender economia: entender o mundo em que vive ser um participante mais perspicaz da economia e compreender melhor os potenciais e os limites da política econômica.', '2025-01-21 00:04:17.891782', '2025-01-21 00:04:17.891782') RETURNING "id" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Livro'*/[0m
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("tittle", "author", "score", "description", "created_at", "updated_at") VALUES ('O que o governo fez com nosso dinheiro?', 'Murray N. Rothbard', 8.0, 'Há Décadas Que Inúmeros Economistas, Investidores, Analistas, Professores E Autores Aprendem Com Este Livro. Após 50 Anos, Ele Permanece O Melhor Livro Sobre O Assunto, Um Verdadeiro Manifesto Em Prol De Uma Moeda Forte.rothbard Mostra Minuciosamente Como Os Bancos Criam Dinheiro Do Nada E Como O Banco Central, Com O Suporte Do Poder Estatal, Permite Esta Prática. Ele Mostra Como As Taxas De Câmbio E De Juros Funcionariam Em Um Livre Mercado. E Principalmente: Ao Descrever O Fim Do Padrão-ouro, Ele Não Se Limita A Relatar Os Grandes Acontecimentos Ele Cita Nomes E Desmascara Os Grupos De Interesse Envolvidos.a Verdadeira Paixão Que Rothbard Sente Pelo Tema É Transferida Aos Leitores Por Meio De Sua Prosa. Impossível Não Se Empolgar Com O Tema. Quem Lê Sobre O Tópico Sempre Quer Divulgar O Que Aprendeu. Mais Ainda: Sente-se Impelido A Fazer Alguma Coisa. O Ex-congressista Ron Paul Confessou Que Se Candidatou Ao Congresso Americano Após Ter Lido Este Livro.por Ser Um Meio De Troca, O Dinheiro Está Presente Em Grande Parte Da Vida Cotidiana De Todas As Pessoas. Portanto, Um Entendimento Sobre Sua Natureza, Alternativas E História É Importante Para Todos. Por Isso, Esta É Uma Obra Indispensável.', '2025-01-21 00:05:58.950072', '2025-01-21 00:05:58.950072') RETURNING "id" /*application='Livro'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Livro'*/[0m
+Started GET "/books" for ::1 at 2025-01-20 21:06:04 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (8.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 12.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.0ms)
+Completed 200 OK in 638ms (Views: 5.2ms | ActiveRecord: 8.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 21:06:12 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 612ms (Views: 5.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 21:06:22 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 633ms (Views: 4.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-20 21:08:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Livro'*/[0m
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:6:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/" for ::1 at 2025-01-20 21:08:06 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | GC: 0.0ms)
+Completed 200 OK in 1296ms (Views: 36.6ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-01-21 15:45:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Livro'*/[0m
+  
+NameError (undefined local variable or method '“' for an instance of ActionDispatch::Routing::Mapper):
+  
+config/routes.rb:6:in 'block in <main>'
+config/routes.rb:1:in '<main>'
+Started GET "/" for ::1 at 2025-01-21 15:45:18 -0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Livro',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 33.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 176.5ms | GC: 0.0ms)
+Completed 200 OK in 1801ms (Views: 179.5ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/7" for ::1 at 2025-01-21 15:45:29 -0300
+Processing by BooksController#show as HTML
+  Parameters: {"id" => "7"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 7 LIMIT 1 /*action='show',application='Livro',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in 'BooksController#set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 646ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/stimulus.min-2395e199.js.map" for ::1 at 2025-01-21 15:45:31 -0300
+Started GET "/assets/turbo.min-5dd5a71a.js.map" for ::1 at 2025-01-21 15:45:31 -0300
