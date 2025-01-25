@@ -41,11 +41,16 @@ Ruby é uma linguagem de programação criada para ser de fácil entendimento, c
 - **🔹 Descrição**: Neste projeto, eu fui desafiado a criar um código em três arquivos que “conversem” entre si como aprendido nas aulas. Simulei o ato de escolher e comprar um produto em um mercado.
 - **🔧 Tecnologias Utilizadas**: Ruby, POO.
 - **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/tree/main/Desafios/MercadocomPOO).
-Criando o seu Blog com Ruby on Rails
+
 ### 6. [📄 Criando o seu Blog com Ruby on Rails]
 - **🔹 Descrição**: Neste desafio utilizei todos os conhecimentos aprendidos sobre Ruby on Rails durante o curso, desenvolvi um blog na temática dos livros que li.
 - **🔧 Tecnologias Utilizadas**: Ruby, POO, Ruby on Rails.
 - **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/tree/main/Desafios/livro).
+
+### 7. [📄 Qual é o seu WhatsApp?]
+- **🔹 Descrição**: Neste desafio eu criei um código que imprime uma frase falando que meu Whatsapp é ......., e utilizando expressões regulares (match) confirindo se esse whatsapp é do tipo (99) 9 9999-9999.
+- **🔧 Tecnologias Utilizadas**: Ruby, Regex.
+- **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/blob/main/Desafios/whatsapp.rb).
 
 ## 📢 Contato
 
