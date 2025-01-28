@@ -52,6 +52,11 @@ Ruby é uma linguagem de programação criada para ser de fácil entendimento, c
 - **🔧 Tecnologias Utilizadas**: Ruby, Regex.
 - **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/blob/main/Desafios/whatsapp.rb).
 
+### 8. [📄 Analisando Páginas HTML em Ruby com a Biblioteca Nokogiri]
+- **🔹 Descrição**: Utilizando a Gem NOKOGIRI irá ler o arquivo html do site example.com e deverá retornar na tela o que se encontra em ‘p’.
+- **🔧 Tecnologias Utilizadas**: Ruby, Comunicação Web, Get, Web Scraping, Gem Nokigiri.
+- **🔗 Repositório**: [Link para o projeto no GitHub](https://github.com/victorrf/Ruby_Developer/tree/main/Desafios/GemNokigiri).
+
 ## 📢 Contato
 
 Se você deseja saber mais sobre meus projetos ou discutir oportunidades, entre em contato:
